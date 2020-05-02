@@ -1,0 +1,44 @@
+
+
+ansible-playbook -i inventory <playbook-name> --extra-vars variable-name="value"
+ansible-playbook -i inventory <playbook-name> --extra-vars '{""var1":"value", "var2":["value2","val3","val4"]}
+
+
+Roles:
+ansible-galaxy init <role-name>    --> to create role
+
+
+pre_tasks:
+       - name: 
+          apt:
+
+       -
+
+roles: 
+  - mine
+ 
+   post_role:
+   
+
+
+
+
+/////role:
+ meta/main.yml 
+
+allow_dependencies: true
+
+..........................
+
+ - roles: 
+   - role: mine
+       vars: 
+          dbname: "value1"
+   - { role:  mine, vars: { dbname: "value2" }} 
+
+
+
+
+
+
+
